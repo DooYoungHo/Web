@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description", content="웹 프로그래밍의 기초">
+	<meta name="keywords", content="HTML, CSS">
+	<meta name="author", content="Youngho">
+
+	<title>HTML과 레이아웃</title>
+</head>
+<body>
+	<!-- header 태그는 웹 사이트의 머리글에 해당합니다. 이 태그에는 회사 이름이나 슬로건을 입력하고, <img> 태그를 이용하여 회사 로고를 삽입하거나,
+	페이지 전환을 위한 메뉴 버튼을 작성합니다. 
+	<nav> 태그는 메뉴 버튼을 담는 공간입니다. <nav> 태그 안에는 버튼을 만들 때 사용하는 태그를 사용할 수 있습니다. -->
+	<header>
+		<h1>
+			영호컴퍼니
+		</h1>
+		<nav>
+			<ul>
+				<li><a href="#">메뉴 1</a></li>
+				<li><a href="#">메뉴 2</a></li>
+				<li><a href="#">메뉴 3</a></li>
+			</ul>
+		</nav>
+	</header>
+	<!-- <section> 태그는 웹 사이트 영역을 설정할 때 사용합니다.
+		 <article> 태그는 웹 사이트 주요 내용이 담기는 공간입니다.
+		 <aside> 태그는 본문 내용과 연관성이 적은 내용이 담기는 공간입니다.
+
+		 section 태그는 책으로 치면 각 chapter의 내용을 담은 영역입니다.-->
+	<section>
+		<h2>SERVICE</h2>
+		<aside>
+			<p>페이지 주요 내용과 연관성이 적은 정보를 담는 공간</p>
+		</aside>
+		<article>
+			<h3>E - Commerce</h3>
+		</article>
+		<aside>
+			<p>페이지 주요 내용과 연관성이 적은 정보를 담는 공간</p>
+		</aside>
+	</section>
+	<!-- section 태그를 웹 표준에 맞게 사용하려면 반드시 <h2> ~ <h6>태그 중 하나는 있어야 합니다. 
+		존재하지 않으면 HTML Validator(https://validator.w3.org/#validate_by_input)으로 검사하면 경고 문구가 나타납니다.
+		article 태그는 실제 내용을 담는 공간으로 이 태그도 반드시 <h2> ~ <h6> 태그 중 하나는 있어야 합니다.
+		aside 태그는 웹 사이트의 왼쪽, 오른쪽 가장자리에 정보를 담는 공간입니다. 흔히 사이드 바라고 불리게 됩니다. -->
+
+	<!-- main 태그는 웹 사이트의 본문 내용 전체를 감쌀 때 사용합니다. 따라서 HTML 문서 한 개당 한 번 밖에 사용할 수 없습니다. 
+		사이드 바, 내비게이션 링크, 저작권 정보에 있는 내용을 main 태그 안에 입력할 수 있습니다. 공간을 정의하는 다른 태그와 달리,
+		인터넷 익스플로러에서는 지원하지 않습니다. 따라서 인터넷 익스플로러를 지원하려면 role 속성을 추가해서 main 속성값을 따로 지정해야 합니다. -->
+	<main role="main">
+		<section>
+			<h2>Portfolio</h2>
+			<article>
+				<h3>Project One</h3>
+			</article>
+		</section>
+	</main>
+
+	<!-- footer 태그는 웹 사이트 하단에 들어가는 정보를 담는 공간입니다. 보통 사업자 등록번호, 주소, 연락처, 이메일 주소, 저작권 표시 등
+	해당 웹 사이트를 관리하는 회사 정보를 입력할 때 사용합니다. -->
+	<footer>
+		<p>회사 주소 : 대전광역시 서구 갈마동 1300</p>
+		<p>연락처 : 010-9599-7405</p>
+		<p>이메일 : pimang223@naver.com</p>
+		<p>저작권 : 두OO 소유</p>
+	</footer>
+
+	<!-- div 태그는 임의의 작은 구역을 만들 때 사용합니다. 웹 사이트를 제작할 때 가장 많이 사용하는 태그 중 하나입니다.
+		쉽게 설명해서 ppt에 있는 객체 묶기와 비슷한 기능을 한다고 보면 됩니다. -->
+
+	<!-- HTML의 Block 요소와 Inline 요소
+	두 요소에는 공통적인 세 가지 특징이 있습니다.
+	- 줄 바꿈 현상 유무
+	- width와 height 속성 적용 유무
+	- margin-top, margin-bottom, padding-top, padding-bottom 속성 적용 유무 -->
+
+	<!-- Block 요소 -->
+	<p>HTML's Block Line</p>
+	<p>HTML's Block Line</p>
+
+	<!-- Inline 요소 -->
+	<span>HTML's Inline</span>
+	<span>HTML's Inline</span>
+	<span>
+		<nav>
+			<ul>
+				<li><a href="#">메뉴</a></li>
+				<li><a href="#">연락</a></li>
+			</ul>
+		</nav>
+	</span>
+</body>
+</html>
